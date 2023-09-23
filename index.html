@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/components/modal.css">
     <title>Projeto - Suficiência</title>
 </head>
 <body>
@@ -16,14 +16,14 @@
         <div class="container">
             <div class="header-main">
                 <h1>Some webpage</h1>
-                <nav>
-                    <button id="menu-btn"><i class="fa-solid fa-bars"></i>Menu</button>
-                    <ul class="menu-links">
-                        <li><a href="index.php">Criar Post</a></li>
-                        <li><a href="cadastro.php">Buscar Post</a></li>
-                        <li><a href="login.php">Remover Posts</a></li>
+                <div class="menu-container">
+                    <button class="menu-btn"><i class="fa-solid fa-bars"></i>Menu</button>
+                    <ul class="menu-options">
+                        <li class="create-post">Criar Post</li>
+                        <li class="search-post">Buscar Post</li>
+                        <li class="remove-post">Remover Post</li>
                     </ul>
-                </nav>
+                </div>                
                 <div class="social-links">
                     <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
                     <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -34,17 +34,40 @@
             </div>
         </div>
     </header>
+    <section class="modal" id="modal">
+        <div class="container">
+            <div class="modal-content">
+                <form id="form">
+                    <div class="close-panel">
+                        <i class="fa-solid fa-x" id="close-panel-icon"></i>
+                    </div>
+                    <h3>Criar Post</h3>
+                    <label for="p-title">Título</label>
+                    <input type="text" id="p-title" placeholder="Título" required>
+                    <label for="p-content">Conteúdo</label>
+                    <textarea id="p-content" cols="30" rows="10" placeholder="Conteúdo" required></textarea>
+                    <button id="create-post-btn" class="save" type="submit">Criar Post</button>
+                </form>                
+            </div>
+        </div>
+    </section>
     <section>
         <div class="container">
             <div class="post-section">
-                <h2>Cool post</h2>
-                <span>May 24, 2023</span>
-                <p>Very cool information...</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="post_header">Cool post</td>
+                            <td class="post_date">May 24, 2023</td>
+                            <td class="post_content">Very cool information...</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <hr>
         </div>
     </section>
-    <script type="module" src="script.js"></script>
+    <script crossorigin="anonymous" type="module" src="./main.js"></script>
     <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/60125727cb.js" crossorigin="anonymous"></script>
 </body>

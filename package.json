@@ -1,0 +1,16 @@
+{
+  "name": "projeto_web_suficiencia",
+  "version": "1.0.0",
+  "description": "Projeto Web para atestar conhecimentos em Front-End",
+  "main": "./main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Weslley Silva",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-google": "^0.14.0"
+  }
+}
