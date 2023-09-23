@@ -1,0 +1,212 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --default-color: #403c3a;
+    --default-gray: #f0f0f0;
+    --default-font: #919191;
+    --default-white: #ffffff;
+}
+
+header{
+    padding-top: 20px;
+    width: 100%;
+    height: 200px;
+    background-color: var(--default-gray);
+}
+
+.container {
+    width: calc(100dvw - 8%);
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header-main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px 0;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--default-font);
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    color: var(--default-color);
+}
+
+nav button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: var(--default-font) solid 1px;
+    font-size: 16px;
+}
+nav button i {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: none;
+}
+
+section {
+    padding-top: 60px;
+}
+
+.post-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.post-section h2{
+    color: var(--default-color);
+    margin-bottom: 10px;
+}
+
+.post-section span{
+    color: var(--default-font);
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.post-section p {
+    color: var(--default-font);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 359px) {
+    body {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 640px) {
+    .container {
+        max-width: calc(100dvw - 10%);
+        height: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: 100%;
+        background-color: var(--default-gray);
+        margin-bottom: 20px;
+    }
+    .header-main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-main h1{
+        margin-bottom: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    nav button {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        cursor: pointer;
+        border: var(--default-font) solid 1px;
+        font-size: 16px;
+    }
+    nav button i {
+        margin-right: 10px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover{
+        color: var(--default-white);
+    }
+        
+    .menu-active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: var(--default-gray);
+        list-style: none;
+        gap: 10px;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .menu-active a{
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--default-font);
+    }
+
+    .menu-active a:hover{
+        color: var(--default-color);
+    }
+
+    .post-section {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    .post-section h2{
+        color: var(--default-color);
+        margin-bottom: 10px;
+    }
+
+    .post-section span{
+        color: var(--default-font);
+        font-size: 12px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    .post-section p {
+        color: var(--default-font);
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
