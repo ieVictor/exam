@@ -13,6 +13,7 @@ export const savePost = () => {
       content: document.getElementById('p-content').value,
       date: new Date().toLocaleString('pt-BR')
     }
+
     createPost(post)
     clearFields()
     closeModal()
@@ -21,5 +22,5 @@ export const savePost = () => {
 
 export function isValidaFields () {
   const form = document.getElementById('form')
-  form.reportValidity()
+  return form.reportValidity()
 }

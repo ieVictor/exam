@@ -12,13 +12,23 @@ export function setLocalStorage (dbPost) {
 // CRUD - CREATE
 export function createPost (post) {
   const dbPost = getLocalStorage()
+  const postC = document.createElement('div')
+  const postList = document.getElementById('post-list')
+
+  postC.classList.add('post')
+  postC.innerHTML = `
+    <h2>${post.title}</h2>
+    <p>${post.content}</p>
+  `
+
+  postList.appendChild(postC)
   dbPost.push(post)
   setLocalStorage(dbPost)
 }
 
 // CRUD - READ
 export function readPost () {
-  getLocalStorage()
+  return getLocalStorage()
 }
 
 // CRUD - UPDATE
